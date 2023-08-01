@@ -28,7 +28,7 @@ int[,] DeleteMinRowAndColumn(int[,] array, int iMin, int jMin, int minElement)
         l = 0;
     }
     if (FindCountMinIndex(newArray, iMin, jMin, minElement)) return DeleteMinRowAndColumn(newArray, iMin, jMin, minElement);
-    else return newArray;
+    return newArray;
 }
 
 bool FindCountMinIndex(int[,] array, int iMin, int jMin, int minElement)
@@ -87,7 +87,7 @@ int[,] Create2DArray(int rows, int columns)
     {
         for (int j = 0; j < columns; j++)
         {
-            array[i, j] = new Random().Next(1, 5);
+            array[i, j] = new Random().Next(1, 3);
             Console.Write($"{array[i, j]}\t");
         }
         Console.WriteLine();
